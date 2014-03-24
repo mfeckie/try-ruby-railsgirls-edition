@@ -1240,3 +1240,8 @@
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+
+
+.full_width { // Use to override row width which by default doesn't use full screen on large displays
+  max-width: 100%;
+}
