@@ -24,5 +24,7 @@
 TryRubyRailsgirls = Ember.Application.create();
 
 //= require_tree .
-
-$(function(){ $(document).foundation(); });
+<% unless Rails.env.production? %>
+Foundation.set_namespace = function () {};
+<% end %>
+$(function () { $(document).foundation(); });
