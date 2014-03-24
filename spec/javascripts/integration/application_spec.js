@@ -10,7 +10,6 @@ module('Visiting the main page', {
 test('Home page text', function () {
     visit('/');
     andThen(function () {
-        var heading = find('h1:contains("Let\'s Learn Ruby!")').length;
-        ok(heading == 1)
+        elementHasText('h1', "Let\'s Learn Ruby!")
     });
 });
