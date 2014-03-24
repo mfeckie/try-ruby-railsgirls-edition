@@ -42,11 +42,11 @@ Teaspoon.setup do |config|
     # Available frameworks: teaspoon-jasmine, teaspoon-mocha, teaspoon-qunit
     #
     # Note: To use the CoffeeScript source files use `"teaspoon/jasmine"` etc.
-    suite.javascripts = ["teaspoon-jasmine"]
+    suite.javascripts = ["teaspoon-qunit"]
 
     # If you want to change how Teaspoon looks, or include your own stylesheets you can do that here. The default is the
     # stylesheet for the HTML reporter.
-    suite.stylesheets = ["teaspoon"]
+    suite.stylesheets = ["teaspoon", "teaspoon_custom"]
 
     # When running coverage reports, you probably want to exclude libraries that you're not testing.
     # Accepts an array of filenames or regular expressions. The default is to exclude assets from vendors or gems.
