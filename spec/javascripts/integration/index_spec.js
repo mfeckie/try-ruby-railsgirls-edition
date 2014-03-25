@@ -10,6 +10,6 @@ module('Visiting the main page', {
 test('Home page text', function () {
     visit('/');
     andThen(function () {
-        elementHasText('h1', "Let\'s Learn Ruby!")
+        elementHasText('h1', "Welcome Nubies!")
     });
 });
