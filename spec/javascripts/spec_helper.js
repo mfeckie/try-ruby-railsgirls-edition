@@ -33,7 +33,7 @@ var d = document;
 d.write('<div id="ember-testing-container"><div id="ember-testing"></div></div>');
 
 
-TryRubyRailsgirls.rootElement = "#ember-testing";
-TryRubyRailsgirls.setupForTesting();
-TryRubyRailsgirls.injectTestHelpers();
+TryRubyRailsGirls.rootElement = "#ember-testing";
+TryRubyRailsGirls.setupForTesting();
+TryRubyRailsGirls.injectTestHelpers();
 

@@ -1,19 +1,19 @@
 var routesTo = function (url, route_name) {
     visit(url);
     andThen(function () {
-        var current_route = TryRubyRailsgirls.__container__.lookup('controller:application').currentRouteName;
+        var current_route = TryRubyRailsGirls.__container__.lookup('controller:application').currentRouteName;
         equal(current_route, route_name, 'Expected ' + route_name + ', got: ' + current_route);
     });
 };
 
 var respondsTo = function (model, attribute, type) {
-    var test_subject = TryRubyRailsgirls[model].metaForProperty(attribute);
+    var test_subject = TryRubyRailsGirls[model].metaForProperty(attribute);
     equal(test_subject.type, type, 'Expected ' + type + " got: " + test_subject.type);
     ok(test_subject.isAttribute);
 };
 
 var computedPropertyTest = function (model, record, computed_property, expected_output) {
-    var store = TryRubyRailsgirls.__container__.lookup('store:main');
+    var store = TryRubyRailsGirls.__container__.lookup('store:main');
     Ember.run(function () {
         var new_record = store.createRecord(model, record);
         var computed = new_record.get(computed_property);
@@ -22,9 +22,9 @@ var computedPropertyTest = function (model, record, computed_property, expected_
 };
 
 var turnOnRESTAdapter = function () {
-    TryRubyRailsgirls.ApplicationAdapter = DS.RESTAdapter;
+    TryRubyRailsGirls.ApplicationAdapter = DS.RESTAdapter;
 
-    TryRubyRailsgirls.Store = DS.Store.extend({
+    TryRubyRailsGirls.Store = DS.Store.extend({
         adapter: '-active-model'
     });
 
