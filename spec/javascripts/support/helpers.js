@@ -43,3 +43,22 @@ var elementHasText = function (element, text) {
     var el = find(element).text();
     ok(match.test(el), "Expected: " + text + " via: " + element);
 };
+
+var terminalEntry = function (text) {
+    var e;
+    var $root = $(document.documentElement || window);
+    for (var i = 0; i < text.length; ++i) {
+        e = $.Event("keypress");
+        e.which = text.charCodeAt(i);
+        $root.trigger(e);
+    }
+    var enter = $.Event("keydown");
+    enter.ctrlKey = false;
+    enter.which = enter.keyCode = 13;
+    $(document.documentElement || window).trigger(enter);
+}
+
+var getTerminalOutput = function (element) {
+    var elementToFind = element || '.terminal-output div:last';
+    return $(elementToFind).html().replace(/&nbsp;/g, " ");
+}
