@@ -12,15 +12,6 @@ var respondsTo = function (model, attribute, type) {
     ok(test_subject.isAttribute);
 };
 
-var computedPropertyTest = function (model, record, computed_property, expected_output) {
-    var store = TryRubyRailsGirls.__container__.lookup('store:main');
-    Ember.run(function () {
-        var new_record = store.createRecord(model, record);
-        var computed = new_record.get(computed_property);
-        equal(computed, expected_output, 'Expected ' + expected_output + ' got: ' + computed);
-    });
-};
-
 var turnOnRESTAdapter = function () {
     TryRubyRailsGirls.ApplicationAdapter = DS.RESTAdapter;
 
@@ -43,22 +34,3 @@ var elementHasText = function (element, text) {
     var el = find(element).text();
     ok(match.test(el), "Expected: " + text + " via: " + element);
 };
-
-var terminalEntry = function (text) {
-    var e;
-    var $root = $(document.documentElement || window);
-    for (var i = 0; i < text.length; ++i) {
-        e = $.Event("keypress");
-        e.which = text.charCodeAt(i);
-        $root.trigger(e);
-    }
-    var enter = $.Event("keydown");
-    enter.ctrlKey = false;
-    enter.which = enter.keyCode = 13;
-    $(document.documentElement || window).trigger(enter);
-}
-
-var getTerminalOutput = function (element) {
-    var elementToFind = element || '.terminal-output div:last';
-    return $(elementToFind).html().replace(/&nbsp;/g, " ");
-}

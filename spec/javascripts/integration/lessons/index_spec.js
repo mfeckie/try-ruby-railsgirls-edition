@@ -14,13 +14,4 @@ test('Visting lessons index page', function () {
     });
 });
 
-test('Interacting with the terminal', function () {
-    visit('/lessons');
-    andThen(function () {
-        terminalEntry('help')
-        var expect = "back: takes you to the previous lesson";
-        equal(getTerminalOutput(), expect, "Expected: " + expect + " Got: " + getTerminalOutput())
-    });
-});
-
 
