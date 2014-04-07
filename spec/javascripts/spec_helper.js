@@ -1,6 +1,6 @@
 //= require support/bind-poly
 //= require application.js.erb
-//= require support/helpers
+//= require_tree ./support
 
 var d = document;
 d.write('<div id="ember-testing-container"><div id="ember-testing"></div></div>');

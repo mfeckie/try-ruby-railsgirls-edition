@@ -22,6 +22,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'factory_girl_rails'
   gem 'growl'
   gem 'guard-rspec'
   gem 'guard-teaspoon'

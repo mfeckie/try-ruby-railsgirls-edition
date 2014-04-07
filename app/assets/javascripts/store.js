@@ -5,3 +5,7 @@ TryRubyRailsGirls.Store = DS.Store.extend({
   // is built to work nicely with the ActiveModel::Serializers gem.
   adapter: '-active-model'
 });
+
+DS.RESTAdapter.reopen({
+    namespace: 'api/v1'
+})

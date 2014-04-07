@@ -65,6 +65,11 @@ GEM
       handlebars-source (~> 1.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    factory_girl (4.4.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
+      railties (>= 3.0.0)
     ffi (1.9.3)
     formatador (0.2.4)
     foundation-rails (5.2.1.0)
@@ -215,6 +220,7 @@ DEPENDENCIES
   codemirror-rails
   ember-rails (~> 0.14)
   ember-source (~> 1.1)
+  factory_girl_rails
   foundation-rails (= 5.2.1.0)
   growl
   guard-rspec
