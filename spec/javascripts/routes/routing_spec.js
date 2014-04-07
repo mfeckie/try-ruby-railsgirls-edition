@@ -11,4 +11,5 @@ test('About page route', function () {
 test('Lessons routes', function () {
     routesTo('/lessons', 'lessons.index');
     routesTo('/lessons/1', 'lessons.show');
+    routesTo('/lessons/new', 'lessons.new');
 });

@@ -3,6 +3,7 @@
 TryRubyRailsGirls.Router.map(function() {
   this.route('about');
   this.resource('lessons', function () {
-      this.route('show', {path: '/:id'})
+      this.route('show', {path: '/:id'});
+      this.route('new');
   })
 });
