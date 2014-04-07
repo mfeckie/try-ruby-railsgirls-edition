@@ -1,9 +1,9 @@
-TryRubyRailsGirls.LessonEditorComponent = Ember.Component.extend({
+TryRubyRailsGirls.LessonBodyComponent = Ember.Component.extend({
     actions: {
     },
-    setupFlags: function () {
+    onInit: function () {
         var lesson_area = $('#lesson_body')[0];
-        window.lessonEditor = CodeMirror(lesson_area, {
+        window.lessonBody = CodeMirror(lesson_area, {
             lineNumbers: true,
             mode: 'text/x-markdown',
             theme: 'lesser-dark',

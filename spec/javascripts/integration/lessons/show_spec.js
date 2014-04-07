@@ -1,9 +1,8 @@
 module('Individual lessons', {
-    setup: function() {
-
+    setup: function () {
+        TryRubyRailsGirls.reset();
     },
-    teardown: function() {
-        resetFixtures();
+    teardown: function () {
     }
 });
 
@@ -15,7 +14,7 @@ test('Visiting an individual lesson', function () {
         elementHasText('.panel', 'Strings in Ruby are');
         var editorText = window.editor.getValue();
         var matcher = /puts \"Hello Friend!\"/;
-        ok(matcher.test(editorText), editorText);
+        ok(matcher.test(editorText), "Expected: " + matcher + "got: " + editorText);
     });
 });
 

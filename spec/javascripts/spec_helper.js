@@ -17,17 +17,17 @@ var resetFixtures = function () {
         {
             id: 1,
             lesson_number: 1,
-            title: 'Working with Strings',
-            body: 'Strings in Ruby are',
-            initialCode: 'puts "Hello Friend!"'
+            lesson_title: 'Working with Strings',
+            lesson_body: 'Strings in Ruby are',
+            lesson_code: 'puts "Hello Friend!"'
 
         },
         {
             id: 2,
             lesson_number: 2,
-            title: 'Working with numbers',
-            body: 'Numbers in Runy are',
-            initialCode: 'puts 1 +1'
+            lesson_title: 'Working with numbers',
+            lesson_body: 'Numbers in Ruby are',
+            lesson_code: 'puts 1 + 1'
         }
     ];
 };
