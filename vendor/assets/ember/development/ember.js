@@ -42774,10 +42774,10 @@ Test.Adapter = Ember.Object.extend({
 */
 Test.QUnitAdapters = Test.Adapter.extend({
   asyncStart: function() {
-    stop();
+    QUnit.stop();
   },
   asyncEnd: function() {
-    start();
+    QUnit.start();
   },
   exception: function(error) {
     ok(false, Ember.inspect(error));
