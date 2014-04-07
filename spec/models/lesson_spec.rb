@@ -4,9 +4,9 @@ describe Lesson do
   let(:lesson) { FactoryGirl.build_stubbed(:lesson) }
 
   it { should respond_to :lesson_number }
-  it { should respond_to :title }
-  it { should respond_to :body }
-  it { should respond_to :initial_code }
+  it { should respond_to :lesson_title }
+  it { should respond_to :lesson_body }
+  it { should respond_to :lesson_code }
 
 
 end

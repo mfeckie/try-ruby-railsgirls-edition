@@ -3,8 +3,8 @@
 FactoryGirl.define do
   factory :lesson do
     lesson_number 1
-    title 'The first lesson'
-    body 'The body of the lesson'
-    initial_code 'puts "Hello World!"'
+    lesson_title 'The first lesson'
+    lesson_body 'The body of the lesson'
+    lesson_code 'puts "Hello World!"'
   end
 end
