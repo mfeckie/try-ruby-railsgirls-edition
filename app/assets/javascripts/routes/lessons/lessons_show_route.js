@@ -3,7 +3,8 @@ TryRubyRailsGirls.LessonsShowRoute = Ember.Route.extend({
         return {
             lesson_number: 1,
             title: 'Working with Strings',
-            body: 'Strings in Ruby are awesome'
+            body: 'Strings in Ruby are awesome',
+            initialCode: ""
         }
     }
 })

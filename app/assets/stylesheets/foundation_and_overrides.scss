@@ -1245,3 +1245,17 @@
 .full_width { // Use to override row width which by default doesn't use full screen on large displays
   max-width: 100%;
 }
+
+.output-panel {
+  @include panel(
+    // Sets the panel background color. Default: $panel-pg
+    $bg: #EFEFEF,
+      // Sets the panel padding amount. Default: $panel-padding
+    $padding:20px,
+      // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
+    $adjust:true
+  );
+  margin-top: 20px;
+  text-wrap: normal;
+  overflow-wrap: auto;
+}
