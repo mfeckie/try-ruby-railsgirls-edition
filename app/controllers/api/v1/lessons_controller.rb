@@ -1,6 +1,9 @@
 class Api::V1::LessonsController < ApplicationController
   before_action :set_lesson, only: [:show]
 
+  def index
+    render json: @lessons = Lesson.all
+  end
 
   def show
     render json: @lesson

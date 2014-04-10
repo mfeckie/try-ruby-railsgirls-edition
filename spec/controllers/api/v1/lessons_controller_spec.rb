@@ -8,6 +8,12 @@ describe Api::V1::LessonsController do
       get :show, id: @lesson.id, format: :json
       assigns(:lesson).should eq(@lesson)
     end
+
+    it 'has an index route' do
+      @lessons = FactoryGirl.create_list(:lesson, 2)
+      get :index
+      assigns(:lessons).should eq(@lessons)
+    end
   end
 
   describe 'POST requests' do

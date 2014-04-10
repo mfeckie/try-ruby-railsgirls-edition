@@ -6,6 +6,7 @@ TryRubyRailsgirls::Application.routes.draw do
     namespace 'v1' do
       get 'lessons/:id', to: 'lessons#show'
       post 'lessons', to: 'lessons#create'
+      get 'lessons', to: 'lessons#index'
     end
   end
 

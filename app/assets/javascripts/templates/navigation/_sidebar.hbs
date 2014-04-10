@@ -1,6 +1,6 @@
 <ul class="side-nav">
-    <li><a href="#/lessons/1">Lesson 1</a></li>
-    <li><a href="#">Lesson 2</a></li>
-    <li><a href="#">Lesson 3</a></li>
-    <li><a href="#">Lesson 4</a></li>
+    {{#each model}}
+        <li>{{#link-to 'lessons.show' this}}Lesson{{lesson_number}}{{/link-to}}
+        </li>
+    {{/each}}
 </ul>
