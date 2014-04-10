@@ -5,6 +5,7 @@
             <h2>Lesson {{lesson_number}}</h2>
             <h3 id="lesson_title">{{lesson_title}}</h3>
             <p>{{lesson_body}}</p>
+            {{#link-to 'lessons.edit' this class='button tiny'}}Edit lesson{{/link-to}}
         </div>
     </div>
     <div class="large-8 columns">
