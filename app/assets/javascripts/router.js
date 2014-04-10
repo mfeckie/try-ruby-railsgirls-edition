@@ -5,5 +5,6 @@ TryRubyRailsGirls.Router.map(function() {
   this.resource('lessons', function () {
       this.route('show', {path: '/:id'});
       this.route('new');
+      this.route('edit', {path: '/:id/edit'})
   })
 });

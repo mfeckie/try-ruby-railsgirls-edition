@@ -3,8 +3,8 @@ TryRubyRailsGirls.LessonsNewController = Ember.Controller.extend({
         saveLesson: function () {
             var self = this;
             var newLesson = {
-                lesson_number: this.get('lessonNumber'),
-                lesson_title: this.get('lessonTitle'),
+                lesson_number: this.get('lesson_number'),
+                lesson_title: this.get('lesson_title'),
                 lesson_body: window.lessonBody.getValue(),
                 lesson_code: window.lessonCode.getValue()
             };

@@ -8,7 +8,8 @@ TryRubyRailsGirls.LessonCodeComponent = Ember.Component.extend({
             mode: 'text/x-ruby',
             theme: 'lesser-dark',
             tabSize: 2,
-            lineWrapping: true
+            lineWrapping: true,
+            value: this.get('lesson_code') || ''
         })
     }.on('didInsertElement')
 });
