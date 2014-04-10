@@ -19,8 +19,18 @@ describe Api::V1::LessonsController do
   describe 'POST requests' do
     it 'saves the model' do
       @lesson = FactoryGirl.attributes_for(:lesson)
-      expect{post :create, lesson: @lesson, format: :json}.to change(Lesson, :count).by(1)
+      expect { post :create, lesson: @lesson, format: :json }.to change(Lesson, :count).by(1)
     end
   end
 
+  describe 'PUT requests' do
+    before :each do
+      @lesson = Lesson.create(lesson_title: 'Updated lesson',lesson_number: 99, lesson_body: 'Updated body', lesson_code: 'Update code')
+    end
+    it 'updates the record' do
+      put :update, id: @lesson.id, lesson: FactoryGirl.attributes_for(:lesson)
+      @lesson.reload
+      expect(@lesson.lesson_title).should eq 'The first lesson'
+    end
+  end
 end

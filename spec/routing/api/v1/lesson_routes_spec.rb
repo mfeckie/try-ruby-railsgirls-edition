@@ -10,4 +10,8 @@ describe Api::V1::LessonsController do
     expect(post '/api/v1/lessons').to be_routable
   end
 
+  it 'can update a lesson' do
+    expect(put '/api/v1/lessons/1').to be_routable
+  end
+
 end

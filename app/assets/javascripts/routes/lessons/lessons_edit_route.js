@@ -9,12 +9,13 @@ TryRubyRailsGirls.LessonsEditRoute = Ember.Route.extend({
             m.set('lesson_body', window.lessonBody.getValue());
             m.set('lesson_code', window.lessonCode.getValue());
             var onSuccess = function() {
-                self.transitionTo('lesson.show', m.id);
+                console.log('success called');
+                self.transitionTo('lessons.show', m.id);
             };
             var onFailure = function () {
                 console.log('error'); // TODO -> implement proper failure behaviour
             };
-            m.save(onSuccess, onFailure);
+            m.save().then(onSuccess, onFailure);
         }
     }
 });

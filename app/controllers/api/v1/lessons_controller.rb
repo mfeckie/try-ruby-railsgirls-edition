@@ -1,5 +1,5 @@
 class Api::V1::LessonsController < ApplicationController
-  before_action :set_lesson, only: [:show]
+  before_action :set_lesson, only: [:show, :update]
 
   def index
     render json: @lessons = Lesson.all
@@ -14,8 +14,17 @@ class Api::V1::LessonsController < ApplicationController
     if @lesson.save
       render json: @lesson
     else
-      render json: @lesson.errors
+      render json: @lesson.errors, status: 422
     end
+  end
+
+  def update
+    if @lesson.update(lesson_params)
+      render json: @lesson
+    else
+      render json: @lesson.errors, status: 422
+    end
+
   end
 
 end

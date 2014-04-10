@@ -11,10 +11,11 @@ test('Can edit a lesson', function () {
         equal( lesson_body, 'Strings in Ruby are');
         var lesson_code = lessonCode.getValue();
         equal(lesson_code, 'puts "Hello Friend!"', "Expected to find ..., got: " + lesson_code);
+        lesson_code.value = 'class Update';
         fillIn('#lesson_title', 'This is the edited title');
         click('button#save_lesson');
         andThen(function () {
-            var edited_title = find('#lesson_title').val();
+            var edited_title = find('h3').text();
             equal(edited_title, 'This is the edited title', "Expected to find 'This is the edited title'");
         });
     });
