@@ -10,8 +10,6 @@ The major thing that sets this apart is that the Ruby code is compiled to JavaSc
 
 ##Still TODO
 
- - Need to add in the lessons!
- - Improve rendering of results -> maybe make them a bit prettier
  - Would be nice if all output didn't require a puts call
 
 
