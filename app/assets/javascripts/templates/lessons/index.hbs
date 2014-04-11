@@ -1,29 +1,19 @@
 <h1>Let's Learn Ruby!</h1>
 
 <div class="row">
-    <div class="large-4 columns">
-        <div class="panel">
-            <h2>Getting started</h2>
-            <p>Try Ruby - RailsGirls Edition is a web based tutorial aimed at helping you to get starting with the Ruby programming language</p>
-            <p>We provide you with a 'terminal' on the right where we can simulate the Interactive Ruby Console (irb).  The irb console allows you to write code and have it ran immediately, providing very rapid feedback on your progress.</p>
-            <h3>Commands</h3>
-            <p>The following command are available throughout the tutorial</p>
-            <dl>
-                <dt>help</dt>
-                <dd>Lists the commands available for you to use</dd>
-                <dt>clear</dt>
-                <dd>Clears the text in the terminal</dd>
-                <dt>next</dt>
-                <dd>Takes you to the next lesson</dd>
-                <dt>back</dt>
-                <dd>Takes you to the previous lesson</dd>
-            </dl>
-        </div>
-    </div>
-    <div class="large-7 columns">
-        {{irb-terminal}}
-    </div>
-    <div class="large-1 columns">
+    <div class="large-12 columns">
+        <ul class="small-block-grid-3">
+            {{#each model}}
+                <li>
+                    <div class="lessons" {{action 'goToLesson' this}}>
+                        <div class="panel">
+                            <h4>Lesson {{lesson_number}}</h4>
 
+                            <p>{{lesson_title}}</p>
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
     </div>
 </div>

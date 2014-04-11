@@ -9,7 +9,6 @@ TryRubyRailsGirls.LessonsEditRoute = Ember.Route.extend({
             m.set('lesson_body', window.lessonBody.getValue());
             m.set('lesson_code', window.lessonCode.getValue());
             var onSuccess = function() {
-                console.log('success called');
                 self.transitionTo('lessons.show', m.id);
             };
             var onFailure = function () {
