@@ -1,7 +1,7 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-guard :rspec do
+guard :rspec, cmd: 'spring rspec' do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
@@ -19,7 +19,7 @@ guard :rspec do
 end
 
 
-guard :teaspoon do
+guard :teaspoon, cmd: 'spring teaspoon' do
   # Implementation files
   watch(%r{app/assets/javascripts/(.+).js}) { |m| "#{m[1]}_spec" }
   watch(%r{app/assets/javascripts/router.js}) { "spec/javascripts/routes"}

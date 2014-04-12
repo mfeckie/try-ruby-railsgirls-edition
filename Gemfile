@@ -28,5 +28,8 @@ group :test, :development do
   gem 'guard-teaspoon'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-teaspoon'
   gem 'teaspoon'
 end
