@@ -1,6 +1,6 @@
 require 'rspec/core/formatters/base_text_formatter'
 
-class RSpecSmallSpaceFormatter < RSpec::Core::Formatters::BaseTextFormatter
+class SmallSpaceFormatter < RSpec::Core::Formatters::BaseTextFormatter
 
   def start(example_count)
     super(example_count)
