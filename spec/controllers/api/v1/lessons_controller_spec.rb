@@ -30,7 +30,7 @@ describe Api::V1::LessonsController do
     it 'updates the record' do
       put :update, id: @lesson.id, lesson: FactoryGirl.attributes_for(:lesson)
       @lesson.reload
-      expect(@lesson.lesson_title).should eq 'The first lesson'
+      expect(@lesson.lesson_title).to eq 'The first lesson'
     end
   end
 end
