@@ -8,6 +8,7 @@ TryRubyRailsGirls.CodeAreaComponent = Ember.Component.extend({
         }
     },
     setupFlags: function () {
+      console.log('Called onInit')
         var textarea = document.getElementById('code-area');
         window.editor = CodeMirror(textarea, {
             lineNumbers: true,

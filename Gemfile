@@ -25,11 +25,11 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'growl'
   gem 'guard-rspec'
-  gem 'guard-teaspoon'
+  gem 'guard-teaspoon', '0.0.4'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-teaspoon'
-  gem 'teaspoon'
+  gem 'teaspoon', '0.7.9'
 end

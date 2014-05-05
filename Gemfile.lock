@@ -229,7 +229,7 @@ DEPENDENCIES
   foundation-rails (= 5.2.1.0)
   growl
   guard-rspec
-  guard-teaspoon
+  guard-teaspoon (= 0.0.4)
   jquery-rails
   meta_request
   opal-rails
@@ -242,5 +242,5 @@ DEPENDENCIES
   spring-commands-rspec
   spring-commands-teaspoon
   sqlite3
-  teaspoon
+  teaspoon (= 0.7.9)
   uglifier (>= 1.3.0)
