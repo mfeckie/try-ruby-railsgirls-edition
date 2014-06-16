@@ -1,3 +1,6 @@
+[![Hack mfeckie/try-ruby-railsgirls-edition on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=mfeckie%2Ftry-ruby-railsgirls-edition)
+
+
 #TryRuby - RailsGirls Edition
 
 ##Why?
