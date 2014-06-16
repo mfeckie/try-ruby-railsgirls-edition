@@ -3,31 +3,20 @@ class RubyOpalCompiler
     @instance ||= self.new
   end
 
-  def initialize
-    @output = []
+  def initialize()
+    @output         = []
     @compiled_lines = []
   end
 
-  def run_code
+  def run_code(input_code)
     @output =[]
-
     begin
-      code = Opal.compile(`window.editor.getValue()`)
+      code = Opal.compile(input_code)
       eval_code code
       @output
     rescue => err
       log_error err
     end
-  end
-
-  def each_line
-    line_count.times do |n|
-      compile(`window.getLine(#{n-1})`)
-    end
-  end
-
-  def line_count
-    `window.editor.getLineCount()`
   end
 
   def compile(str)

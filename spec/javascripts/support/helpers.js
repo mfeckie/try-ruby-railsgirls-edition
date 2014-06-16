@@ -24,3 +24,9 @@ Ember.Test.registerHelper('elementHasText', function (app, element, text) {
     var el = find(element).text();
     ok(match.test(el), "Expected: " + text + " via: " + element);
 });
+
+Ember.Test.registerHelper('elementDoesNotHaveText', function (app, element, text) {
+  match = new RegExp(text);
+  var el = find(element).text();
+  ok(!match.test(el), "Expected not to find: " + text + " via: " + element);
+});
