@@ -1,19 +1,35 @@
+class Outputter
+  def results
+    @results ||= []
+  end
+
+  def puts(str)
+    results << str.inspect
+  end
+end
+
 class RubyOpalCompiler
   def self.instance
     @instance ||= self.new
   end
 
+  def output
+    @output
+  end
+
   def initialize()
-    @output         = []
+    @output = []
     @compiled_lines = []
   end
 
   def run_code(input_code)
-    @output =[]
     begin
       code = Opal.compile(input_code)
+      new_stdout = Outputter.new
+      old_stdout, $stdout = $stdout, new_stdout
       eval_code code
-      @output
+      @output = $stdout.results
+      $stdout = old_stdout
     rescue => err
       log_error err
     end
@@ -28,17 +44,7 @@ class RubyOpalCompiler
   end
 
   def log_error(err)
-    print_to_output "#{err}\n#{`err.stack`}"
+    @output = ["#{err}\n#{`err.stack`}"]
   end
 
-  def print_to_output(str)
-    @output << str
-  end
-
-end
-
-Document.ready? do
-  def $stdout.puts(*strs)
-    strs.each { |str| RubyOpalCompiler.instance.print_to_output str }
-  end
 end
